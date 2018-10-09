@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="captcha" method="upgrade">
+	<name>plg_xboxrecaptcha_captcha</name>
+	<version>2.5.0</version>
+	<creationDate>Aprile 2014</creationDate>
+	<author>Dana Harris</author>
+	<authorEmail>optikool@yahoo.com</authorEmail>
+	<authorUrl>www.eyenetdesigns.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>PLG_XBOXRECAPTCHA_CAPTCHA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="xboxrecaptcha">xboxrecaptcha.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.plg_captcha_xboxrecaptcha.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_captcha_xboxrecaptcha.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="public_key"
+					type="text"
+					default=""
+					label="PLG_XBOXRECAPTCHA_PUBLIC_KEY_LABEL"
+					description="PLG_XBOXRECAPTCHA_PUBLIC_KEY_DESC"
+					required="true"
+					filter="string"
+					size="50" />
+		
+				<field
+					name="private_key"
+					type="text"
+					default=""
+					label="PLG_XBOXRECAPTCHA_PRIVATE_KEY_LABEL"
+					description="PLG_XBOXRECAPTCHA_PRIVATE_KEY_DESC"
+					required="true"
+					filter="string"
+					size="50" />
+		
+				<field
+					name="theme"
+					type="list"
+					default="clean"
+					label="PLG_XBOXRECAPTCHA_THEME_LABEL"
+					description="PLG_XBOXRECAPTCHA_THEME_DESC"
+					required="true"
+					filter="">
+					<option
+						value="clean">PLG_XBOXRECAPTCHA_THEME_CLEAN</option>
+					<option
+						value="white">PLG_XBOXRECAPTCHA_THEME_WHITE</option>
+					<option
+						value="blackglass">PLG_XBOXRECAPTCHA_THEME_BLACKGLASS</option>
+					<option
+						value="red">PLG_XBOXRECAPTCHA_THEME_RED</option>
+					</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
